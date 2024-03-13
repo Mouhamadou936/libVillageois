@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libVillageois", "libVillageois\libVillageois.csproj", "{54238420-8EEE-44E2-80D3-CE83CB5B4913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Village", "Villlage\Village.csproj", "{AA7C62E4-7FF2-4DA8-B578-F691F5271591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54238420-8EEE-44E2-80D3-CE83CB5B4913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54238420-8EEE-44E2-80D3-CE83CB5B4913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54238420-8EEE-44E2-80D3-CE83CB5B4913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54238420-8EEE-44E2-80D3-CE83CB5B4913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7C62E4-7FF2-4DA8-B578-F691F5271591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7C62E4-7FF2-4DA8-B578-F691F5271591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7C62E4-7FF2-4DA8-B578-F691F5271591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7C62E4-7FF2-4DA8-B578-F691F5271591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1BC2001-3E18-4E70-8C4B-54F18AE37E75}
+	EndGlobalSection
+EndGlobal
