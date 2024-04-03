@@ -1,67 +1,57 @@
-﻿using System.Runtime.CompilerServices;
+﻿namespace libVillage;
 
-namespace libVillageois
-{
-    public class Village
+using global::libVillageois;
+using libVillage;
+using System.Runtime.CompilerServices;
+
+public class Village
     {
-        private bool _malade;
+        private int _superficie;
 
-        private string _nom;
+        private string description;
 
-        private int _poids;
-        
-        public Village(bool malade,string nom, int poids)
-        {
-            this._malade = malade;
-            this._nom = nom;
-            this._poids = poids;
-        }
-        public Village(string nom)
-        {
-            this._nom = nom;
-            bool malade = false;
-        }
+        private string name;
 
-        public override string ToString()
-        {
-            return "Le villageois se nomme "+this._nom+" peut soulever "+this._poids+" et est "+this._malade;
-        }
-        
-        public bool getMalade()
-        {
-            return _malade;
-        }
-        public string getNom()
-        {
-            return _nom;
-        }
-        public int getPoids()
-        {
-            return _poids;
-        }
-        public int setPoids(int poids)
-        { 
-            _poids = poids;
-            return poids; 
-        }
+        private List<Villageois> mesHabitants;
+    public Village(int superficie, string name,string description)
+    {
+        this.description = description;
+        this.name = name;
+        this._superficie = superficie; 
+        this.mesHabitants = new List<Villageois>();
+    }
 
-        public int poidsSouleve()
-        {
-            int resultat = _poids / 5;
+    public void AjouterVillageois(Villageois b)
+    {
+        mesHabitants.Add(b);
+    }
+    public void AjouterNewVillageois(bool malade, string nom, int poids, int dose)
+    {
+        Villageois nouveauvillageois = new Villageois(malade, nom, poids, dose);
+        mesHabitants.Add(nouveauvillageois);
+    }
+    public Villageois GetVillageois (string nom)
+    {
+        Villageois? v = null;
+           foreach (Villageois b in mesHabitants)
+           {
+                if (b.getNom() == nom)
+                {
+                v = b;
+                }
+           }
+        return v;
+    }
+    public List<Villageois> GetHabitants()
+    {
+        return mesHabitants;
+    }
 
-            return resultat;
-        }
-        public bool soulevememepoids(Village a)
-        {
-            
-            if (this._poids == a.getPoids())
-            {
-                return true;
-            }
-            else return false; 
-            
-           
-        }
-
+    public string GetNom()
+    {
+        return name;
     }
 }
+
+    
+ 
